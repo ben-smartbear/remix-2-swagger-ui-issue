@@ -1,5 +1,8 @@
 import { createRequestHandler } from "@remix-run/express";
 import express from "express";
+import sourceMapSupport from "source-map-support";
+
+sourceMapSupport.install();
 
 // notice that the result of `remix build` is "just a module"
 import * as build from "./build/index.js";
