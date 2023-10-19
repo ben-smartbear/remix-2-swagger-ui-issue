@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "remix dev -c \"node server.mjs\""
+    "dev": "remix dev -c \"node --require ./File.cjs server.mjs\""
   },
   "author": "",
   "license": "ISC",

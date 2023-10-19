@@ -7,7 +7,11 @@ import {
 } from "@remix-run/react";
 
 import SwaggerUI from 'swagger-ui-react'
-import "swagger-ui-react/swagger-ui.css";
+import styles from "swagger-ui-react/swagger-ui.css";
+
+export const links = () => [
+  { rel: "stylesheet", href: styles },
+];
 
 export default function App() {
   return (
@@ -21,7 +25,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <SwaggerUI />
+        <SwaggerUI url="https://petstore3.swagger.io/api/v3/openapi.json" />
         <Outlet />
         <LiveReload />
         <Scripts />
